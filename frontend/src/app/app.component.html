@@ -1,4 +1,27 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
-  
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>
+
+<ion-menu side="end" content-id="main" autoHide="true">
+  <ion-content>
+    <ion-list>
+        <ion-menu-toggle>
+          <ion-item>
+            <ion-label>YO</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>Mis Comentarios </ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>Mis Destacadas</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Peliculas Niños</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Peliculas Jovenes</ion-label>
+    </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+  </ion-content>
+</ion-menu>

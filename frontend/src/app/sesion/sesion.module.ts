@@ -8,6 +8,7 @@ import { SesionPageRoutingModule } from './sesion-routing.module';
 
 import { SesionPage } from './sesion.page';
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -17,4 +18,10 @@ import { SesionPage } from './sesion.page';
   ],
   declarations: [SesionPage]
 })
-export class SesionPageModule {}
+export class SesionPageModule {
+  slideOpts = {
+    initialSlide: 1,
+    speed: 400,
+    autoplay: true
+}
+}

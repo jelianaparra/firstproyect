@@ -1,9 +1,24 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>sesion</ion-title>
+<ion-buttons>
+  <ion-menu-button slot="end"></ion-menu-button>
+
+</ion-buttons>
+   
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-slides  [options]="slideOpts">
+    <ion-slide>
+      <img src="../assets/rick.jpg" alt="">
+    </ion-slide>
+    <ion-slide>
+          <img src="../assets/rick.jpg"/>
+    </ion-slide>
+    <ion-slide>
+      <img src="../assets/rick.jpg"/>
+    </ion-slide>
+  </ion-slides>
 </ion-content>
