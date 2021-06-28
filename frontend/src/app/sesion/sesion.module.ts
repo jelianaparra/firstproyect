@@ -23,5 +23,7 @@ export class SesionPageModule {
     initialSlide: 1,
     speed: 400,
     autoplay: true
+    
 }
+
 }
