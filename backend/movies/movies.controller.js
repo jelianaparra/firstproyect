@@ -11,7 +11,7 @@ exports.getMovie = async (req, res) => {
   } catch (err) {
     return res.status(400).json({
       done: false,
-      error: "The information could not be accessed",
+      error: "Something went wrong showing the movie",
     });
   }
 };
@@ -25,7 +25,7 @@ exports.getMovies = async (req, res) => {
   } catch (err) {
     return res.status(400).json({
       done: false,
-      error: "The information could not be accessed",
+      error: "Something went wrong showing the movies",
     });
   }
 };
@@ -33,18 +33,17 @@ exports.getMovies = async (req, res) => {
 exports.addMovies = async (req, res) => {
   const body = req.body;
   const id = req.id;
-  console.log("hhhhhhhh");
   try {
     const movie = new moviesSchema(req.body);
     await movie.save();
     res.json({
       done: true,
-      msg: "Movie updated successfully!",
+      msg: "Movie added successfully!",
     });
   } catch (err) {
     return res.status(400).json({
       done: false,
-      error: "The username or password is incorrect",
+      error: "The movie could not be added",
     });
   }
 };
@@ -56,12 +55,12 @@ exports.uptadeMovies = async (req, res) => {
     await moviesSchema.findByIdAndUpdate(id, body);
     res.json({
       done: true,
-      msg: "Movie updated successfully!",
+      msg: "Movie updated successfully",
     });
   } catch (err) {
     return res.status(400).json({
       done: false,
-      error: "The username or password is incorrect",
+      error: "The movie could not be updated",
     });
   }
 };
@@ -72,7 +71,7 @@ exports.deleteMovies = async (req, res) => {
     await moviesSchema.findByIdAndDelete(id);
     res.json({
       done: true,
-      msg: "Movie delete successfully!",
+      msg: "Movie delete successfully",
     });
   } catch (err) {
     return res.status(400).json({

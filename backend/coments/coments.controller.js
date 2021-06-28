@@ -10,7 +10,7 @@ exports.getComents = async (req, res) => {
   } catch (err) {
     return res.status(400).json({
       done: false,
-      error: "The information could not be accessed",
+      error: "Something went wrong showing the comments",
     });
   }
 };
@@ -23,13 +23,12 @@ exports.addComents = async (req, res) => {
     await coments.save();
     res.json({
       done: true,
-      msg: "Movie updated successfully!",
+      msg: "Comment updated successfully!",
     });
   } catch (err) {
-    console.log("dfghjkl", err);
     return res.status(400).json({
       done: false,
-      error: "The username or password is incorrect",
+      error: "The comment could not be added",
     });
   }
 };
@@ -42,12 +41,12 @@ exports.uptadeComents = async (req, res) => {
     await comentsSchema.findByIdAndUpdate(id, body);
     res.json({
       done: true,
-      msg: "Movie updated successfully!",
+      msg: "Comment updated successfully!",
     });
   } catch (err) {
     return res.status(400).json({
       done: false,
-      error: "The username or password is incorrect",
+      error: "The comment could not be uptaded",
     });
   }
 };
@@ -58,12 +57,12 @@ exports.deleteComents = async (req, res) => {
     await comentsSchema.findByIdAndDelete(id);
     res.json({
       done: true,
-      msg: "Movie delete successfully!",
+      msg: "Comment delete successfully!",
     });
   } catch (err) {
     return res.status(400).json({
       done: false,
-      error: "Movie could not be deleted",
+      error: "The comment could not be deleted",
     });
   }
 };
