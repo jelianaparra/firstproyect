@@ -1,49 +1,49 @@
 const { Schema, model } = require("mongoose");
-const userSchema = new Schema(
+
+const moviesSchema = new Schema(
   {
-    name: {
-      type: String,
-      required: true,
-      trim: true,
-    },
-    email: {
+    title: {
       type: String,
       required: true,
       trim: true,
       unique: true,
     },
-    password: {
+    runTime: {
       type: String,
       required: true,
       trim: true,
     },
-    direction: {
+    director: {
       type: String,
       required: true,
       trim: true,
-      default: "Caracas",
     },
-    age: {
+    releaseDate: {
+      type: Date,
+      required: true,
+      trim: true,
+    },
+    productionCo: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    genre: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    like: {
       type: Number,
       required: true,
       trim: true,
-      default: "22",
+      default: 0,
     },
-    gender: {
-      type: String,
+    disLike: {
+      type: Number,
       required: true,
       trim: true,
-      default: "mujer",
-    },
-    coments: {
-      type: String,
-      trim: true,
-      default: "great movie",
-    },
-    movies: {
-      type: Object,
-      trim: true,
-      default: " la sirenita",
+      default: 0,
     },
   },
   {
@@ -51,4 +51,4 @@ const userSchema = new Schema(
   }
 );
 
-module.exports = model("user", userSchema);
+module.exports = model("movies", moviesSchema);

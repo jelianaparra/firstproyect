@@ -1,0 +1,116 @@
+POST http://localhost:3000/api/register
+Content-Type: application/json
+
+{
+   "name": "luisa",
+   "email": "luis@gmail.com",
+   "password": "12345"
+}
+
+###
+POST http://localhost:3000/profile/profile 
+Content-Type: application/json
+
+{
+   "id": "60d4e78e5c674c1d143a0acf"
+}
+
+###
+DELETE http://localhost:3000/profile/deleteprofile
+Content-Type: application/json
+
+{
+   "id": "60d9fe7a0a9fb244ec8815fa"
+}
+
+### 
+PUT http://localhost:3000/profile/uptadeprofile
+Content-Type:  application/json
+
+{   
+    "id": "60d4e78e5c674c1d143a0acf",
+    "name": "camilo",
+    "email": "mariacamilo@gmail.com"
+}
+
+###
+POST http://localhost:3000/movies/addmovie
+Content-Type: application/json
+
+{
+   "title": "joker",
+   "runTime": "1h",
+   "productionCo": "ggg",
+   "director":"walt disney",
+   "releaseDate": "1624904420875",
+   "genre": "infantil",
+   "rating": "7"
+
+}
+
+###
+GET http://localhost:3000/movies/movies
+
+### 
+PUT http://localhost:3000/movies/uptademovies
+Content-Type: application/json
+
+{
+    "id": "60da162ad8160a49f0862529",
+   "title": "joker",
+   "runTime": "3h",
+   "productionCo": "ggg",
+   "director":"walt disney",
+   "releaseDate": "1624904420875",
+   "genre": "accion",
+   "rating": "7"
+
+}
+### 
+POST http://localhost:3000/movies/movie
+Content-Type: application/json
+
+{
+    "id": "60da162ad8160a49f0862529"
+
+}
+
+###
+DELETE http://localhost:3000/movies/deletemovies
+Content-Type: application/json
+
+{
+    "id": "60da162ad8160a49f0862529"
+}
+###
+GET http://localhost:3000/coments/allcoments
+
+###
+POST http://localhost:3000/coments/addcoments
+Content-Type: application/json
+
+{
+   "content": "ooooooooooooooooooooooooooooooooooooooooooo",
+   "author": "miguel",
+   "movie": " joker"
+
+}
+
+### 
+PUT http://localhost:3000/coments/uptadecoments
+Content-Type: application/json
+
+{
+    "id":"60da20fe3fcd3c1e340f1da8",
+   "content": "oo",
+   "author": "miguel",
+   "movie": " joker"
+}
+
+###
+DELETE http://localhost:3000/coments/deletecoments
+Content-Type: application/json
+
+{
+     "id":"60da20fe3fcd3c1e340f1da8"
+}
