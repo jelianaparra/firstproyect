@@ -5,6 +5,8 @@
     <ion-buttons>
       <ion-menu-button slot="end"></ion-menu-button>
       <ion-label>Menú</ion-label>
+      <ion-button  color="dark" slot="end"[routerLink]="['/sesion']">
+        <ion-icon name="flower"></ion-icon>Home</ion-button>
     </ion-buttons>
     </ion-toolbar>
     <ion-searchbar  showCancelButton animated placeholder="Buscar"(ionchange)="buscar($event)"></ion-searchbar>
@@ -28,18 +30,20 @@
         Guerreros extraterrestres eligen a un talentoso piloto de prueba para representarlos en la tierra, quien usará sus nuevos poderos como linterna verde 
         Elenco: Ryan Reynolds, Blake Lively, Peter Sarsgaard, entre otros.
         Genero: Peliculas de ciencia ficción, acción y aventuras 
-        duración: 1h 53min 
+        DURACIÓN:: 1h 53min 
+        PRODUCIDA POR:	DC Entertainment, Warner Premiere, Warner Bros. Animation
     </ion-card-content>
     <ion-item>
       <ion-icon name="pin" slot="start"></ion-icon>
       <ion-label>AÑO DE ESTRENO 2011</ion-label>
-      <ion-buttons color="dark" fill="outline" slot="end">
-        <ion-icon name="create" fill="outline" slot="end"></ion-icon>
-        <ion-label>Comentar</ion-label>
-      </ion-buttons>
+      <ion-button  color="dark" fill="outline" slot="end">Comentar</ion-button>
       <ion-buttons fill="outline" slot="end">
         <ion-icon name="happy" fill="outline" slot="end"></ion-icon>
        <ion-label>Destacar</ion-label>
+       </ion-buttons>
+       <ion-buttons fill="outline" slot="end">
+        <ion-icon name="heart" fill="outline" slot="end"></ion-icon>
+       <ion-label>Me Gusta</ion-label>
        </ion-buttons>
     </ion-item>
   </ion-card>
@@ -54,6 +58,7 @@
       ELENCO: Kea peahu, alex aiono, lindsay watson, entre otras.
       DURACIÓN 2hrs 3min
       GENERO infantil, familiar y de comedia 
+      PRODUCIDA POR: Netflix
     </ion-card-content>
     <ion-item>
       <ion-icon name="pin" slot="start"></ion-icon>
@@ -73,9 +78,10 @@
     </ion-card-header>
     <ion-card-content>
       Despues de descubrir una pasión transformada por el skate, una joven de la india rural debera sortear distintos desafios para alcanzar su sueño de competir 
-      ELENCO: Rachel Saanchita Gupta, Amy Maghera, Shafin  Patel, entre otros
-      GENERO: drama, de la india, social
-      DURACIÓN 1hr 49min
+      ELENCO: Rachel Saanchita Gupta, Amy Maghera, Shafin  Patel, entre otros.
+      GENERO: drama, de la india, social.
+      DURACIÓN: 1hr 49min.
+      PRODUCIDA POR: Netflix
     </ion-card-content>
     <ion-item>
       <ion-icon name="pin" slot="start"></ion-icon>
@@ -97,7 +103,8 @@
       El apnico se apodera de fondo de nikini cuando un pirata roba la receta secreta de la cangreburguer, bob esponja y sus amigos emprenden una misión para recuperarla 
       ELENCO: Tom Kenny, Antonio Banderas, Clancy Brown, entre otros.
       GENERO: pelicula familiar, pelicula infantil y comedia.
-      DURACIÓN 1h 35min
+      DURACIÓN: 1h 35min.
+      PRODUCIDA POR: United Plankton Pictures, Disruption Entertainment
     </ion-card-content>
     <ion-item>
       <ion-icon name="pin" slot="start"></ion-icon>
@@ -120,6 +127,7 @@
 ELENCO: yaya gosselin, pedro pascal, priyanka chopra Jonas, entre otros.
 GÉNERO: Pelicula infantil, familiar y de comedia.
 DURACIÓN: 1hr 40min
+PRODUCIDA POR: Netflix
     </ion-card-content>
     <ion-item>
       <ion-icon name="pin" slot="start"></ion-icon>
@@ -142,6 +150,7 @@ DURACIÓN: 1hr 40min
       ELENCO: Big Sean, Pamela Adlon, Lucy Hale, entre otros.
       GENEROS: pelicula familiar, infantil con musica para niños.
       DURACIÓN: 1hr 28min
+      PRODUCIDA POR: Netflix
     </ion-card-content>
     <ion-item>
       <ion-icon name="pin" slot="start"></ion-icon>
@@ -164,6 +173,7 @@ DURACIÓN: 1hr 40min
       ELENCO: Jimmy Wong, John Cho, Constance Wu, entre otros
       GÉNERO: pelicula china, infantil y familiar 
       DURACIÓN: 1rs 42 min
+      PRODUCIDA POR: Netflix
     </ion-card-content>
     <ion-item>
       <ion-icon name="pin" slot="start"></ion-icon>
@@ -184,8 +194,9 @@ DURACIÓN: 1hr 40min
     <ion-card-content>
       Sentenciado a clases de control de ira, el gruñon red se convierte ne un heroe que entrena a sus compañeros para desatar su furia interna cuando los cerdos los invaden.
       DURACIÓN 1hr 37min.
-      GENERO: Pelicula familiar, infantil y comedia 
+      GENERO: Pelicula familiar, infantil y comedia.
       ELENCO: Jason Sudeikis, Josh Gad, Danny McBride, entre otros.
+      PRODUCIDA POR: Sony Pictures Animation.
     </ion-card-content>
     <ion-item>
       <ion-icon name="pin" slot="start"></ion-icon>
@@ -206,8 +217,9 @@ DURACIÓN: 1hr 40min
     <ion-card-content>
       Dre y su madre se mudan a pekin, donde buscara un maestro de artes marciales que le ayude a defenderse de un maton que la maltrata, nueva versión del clasico de los 80 
       ELENCO: Jaden smith, jackie chan, taraji P. Henson, entre otras.
-      DURACIÓN 2hrs 20min
-      GÉNERO: arte marciales, familiar, infantil y familiar 
+      DURACIÓN 2hrs 20min.
+      GÉNERO: arte marciales, familiar, infantil y familiar.
+      PRODUCIDA POR: Overbrook Entertainment, China Film Group Corp., Jerry Weintraub Productions.
     </ion-card-content>
     <ion-item>
       <ion-icon name="pin" slot="start"></ion-icon>
@@ -229,7 +241,8 @@ DURACIÓN: 1hr 40min
       En textopolis, donde se supone los emogis solo deben mostrar una emoción, las diversas expresiones de gene se vuelven un problema, su solución es volverse normal.
       ELENCO: t.j. Miller, james corden , anna faris, entre otros.
       GÉNERO: pelucula infantil y comedia.
-      DURACIÓN 1hr 27min
+      DURACIÓN 1hr 27min.
+      PRODUCIDA POR: Sony Pictures Animation
     </ion-card-content>
     <ion-item>
       <ion-icon name="pin" slot="start"></ion-icon>
