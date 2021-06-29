@@ -1,13 +1,18 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="danger">
+    <!--Basic: auto-select the icon based on the platform -->
+  <ion-icon name="../assets/foto11.jpg"></ion-icon>
+
+
 <ion-buttons>
   <ion-menu-button slot="end"></ion-menu-button>
- 
+  <ion-label>Menú</ion-label>
 </ion-buttons>
-<ion-title> </ion-title>
-   
-  </ion-toolbar>
+</ion-toolbar>
+<ion-searchbar  showCancelButton animated placeholder="Buscar"(ionchange)="buscar($event)"></ion-searchbar>
 </ion-header>
+
+
 
 <ion-content>
   <ion-slides  [options]="slideOpts">
@@ -21,6 +26,47 @@
       <img src="../assets/foto33.jpg"/>
     </ion-slide>
   </ion-slides>
-</ion-content>
+  
+  <h1 >
+    Estrenos Más Recientes
+  </h1>
+  
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Paternidad</ion-card-subtitle>
+      <ion-card-title>Pelicula Clase B</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Un papa novato y viudo les hace frente a las dudas, los miedos, el dolor y los pañales sucios al criar a su hija por su cuenta, inspirada en una historia real 
+          GÉNERO: basada en la vida real, basada en libros, drama.
+          DURACIÓN: 1hr 50min
+          ELENCO: Kevin Hart, Alfre Woodard, Lil Rel Howery, entre otros
+    </ion-card-content>
+    <ion-item>
+      <ion-icon name="pin" slot="start"></ion-icon>
+      <ion-label>AÑO DE ESTRENO 2021</ion-label>
+      <ion-button fill="outline" slot="end">Ver detalles</ion-button>
+    </ion-item>
+  </ion-card>
 
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>ChikaSkater</ion-card-subtitle>
+      <ion-card-title>Pelicula Clase A</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Despues de descubrir una pasión transformada por el skate, una joven de la india rural debera sortear distintos desafios para alcanzar su sueño de competir 
+      ELENCO: Rachel Saanchita Gupta, Amy Maghera, Shafin  Patel, entre otros
+      GENERO: drama, de la india, social
+      DURACIÓN 1hr 49min
+    </ion-card-content>
+
+    <ion-item>
+      <ion-icon name="pin" slot="start"></ion-icon>
+      <ion-label>AÑO DE ESTRENO 2021</ion-label>
+      <ion-button fill="outline" slot="end"  color="dark">Ver detalles</ion-button>
+    </ion-item>
+  </ion-card>
+
+</ion-content>
 

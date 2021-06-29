@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SesionPage implements OnInit {
 
-  constructor() { }
+  lista: string[];
+
+  constructor() { 
+    
+  }
+
 
   ngOnInit() {
   }
+
+  
+
 
 }

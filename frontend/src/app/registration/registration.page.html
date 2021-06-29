@@ -1,23 +1,23 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Ingresa Aqui tus datos </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
-</ion-content>
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
+  <ion-toolbar color="danger">
+    <ion-buttons>
+      <ion-row>
+        <ion-col>
+          <ion-img name="../assets/foto33.jpg"></ion-img>
+        </ion-col>
+        <ion-col> <ion-back-button></ion-back-button></ion-col>
+        <ion-col>Regresar</ion-col>
+      </ion-row>
+      
+  
     </ion-buttons>
-    <ion-title>Regresar </ion-title>
+    
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <form (ngSubmit)="Register()"[formGroup]="credentials"> 
+
+  <form  class="FormularioRegistro"(ngSubmit)="Register()"[formGroup]="credentials"> 
     <ion-item lines="full">
       <ion-label position="floating">Nombre</ion-label>
       <ion-input type="text" required formControlName="name"></ion-input>
@@ -40,7 +40,7 @@
 
     <ion-row>
       <ion-col>
-        <ion-button type="submit" color="danger" expand="block">Registrarse</ion-button>
+        <ion-button class= "Registrarse" type="submit" color="danger" expand="block">Registrarse</ion-button>
       </ion-col>
     </ion-row>
   </form>
