@@ -14,8 +14,6 @@ exports.createUser = (req, res, next) => {
     if (err && err.code === 11000)
       return res.status(409).send("Email already exists");
     if (err) {
-      console.log("sssssss", err);
-
       return res.status(500).send("Server error");
     }
     const expiresIn = 24 * 60 * 60;
@@ -42,7 +40,7 @@ exports.loginUser = (req, res, next) => {
     if (err) return res.status(500).send("Server error!");
 
     if (!user) {
-      // email does not exist
+      // email no existe
       res.status(409).send({ message: "Something is wrong" });
     } else {
       const resultPassword = bcrypt.compareSync(
@@ -63,7 +61,7 @@ exports.loginUser = (req, res, next) => {
         };
         res.send({ dataUser });
       } else {
-        // password wrong
+        // password incorrecta
         res.status(409).send({ message: "Something is wrong" });
       }
     }

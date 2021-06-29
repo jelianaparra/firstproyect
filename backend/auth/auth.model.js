@@ -33,17 +33,17 @@ const userSchema = new Schema(
       type: String,
       required: true,
       trim: true,
-      default: "mujer",
+      default: "hombre",
     },
     coments: {
       type: String,
       trim: true,
-      default: "great movie",
+      default: "una de las mejores peliculas que the visto, increible reparto",
     },
     movies: {
       type: Object,
       trim: true,
-      default: " la sirenita",
+      default: "Inquebrantable",
     },
   },
   {

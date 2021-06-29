@@ -15,6 +15,23 @@ exports.getMovie = async (req, res) => {
     });
   }
 };
+
+exports.getMoviebytitle = async (req, res) => {
+  const id = req.body.title;
+  try {
+    let movies = await moviesSchema.find({ title: id }).exec();
+    res.json({
+      done: true,
+      movies,
+    });
+  } catch (err) {
+    return res.status(400).json({
+      done: false,
+      error: "Something went wrong showing the movie",
+    });
+  }
+};
+
 exports.getMovies = async (req, res) => {
   try {
     let movies = await moviesSchema.find();

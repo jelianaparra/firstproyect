@@ -7,6 +7,9 @@ router.post("/movie", Movies.getMovie);
 // obtener todas las pelis
 router.get("/movies", Movies.getMovies);
 // insertar peli
+
+router.post("/moviebytitle", Movies.getMoviebytitle);
+
 router.post("/addmovie", Movies.addMovies);
 
 router.put("/uptademovies", Movies.uptadeMovies);

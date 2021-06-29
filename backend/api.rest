@@ -1,13 +1,14 @@
+### Probando el registro de usuarios
 POST http://localhost:3000/api/register
 Content-Type: application/json
 
 {
-   "name": "luisa",
-   "email": "luis@gmail.com",
-   "password": "12345"
+   "name": "miguel",
+   "email": "mm@gmail.com",
+   "password": "salypimienta"
 }
 
-###
+### Obteniendo un profile
 POST http://localhost:3000/profile/profile 
 Content-Type: application/json
 
@@ -15,7 +16,7 @@ Content-Type: application/json
    "id": "60d4e78e5c674c1d143a0acf"
 }
 
-###
+### Eliminando un profile
 DELETE http://localhost:3000/profile/deleteprofile
 Content-Type: application/json
 
@@ -23,7 +24,7 @@ Content-Type: application/json
    "id": "60d9fe7a0a9fb244ec8815fa"
 }
 
-### 
+### Actualizando un Profile
 PUT http://localhost:3000/profile/uptadeprofile
 Content-Type:  application/json
 
@@ -33,7 +34,7 @@ Content-Type:  application/json
     "email": "mariacamilo@gmail.com"
 }
 
-###
+### Agregando una pelicula 
 POST http://localhost:3000/movies/addmovie
 Content-Type: application/json
 
@@ -48,10 +49,10 @@ Content-Type: application/json
 
 }
 
-###
+### Obteniendo las peliculas
 GET http://localhost:3000/movies/movies
 
-### 
+### Actualizando las peliculas 
 PUT http://localhost:3000/movies/uptademovies
 Content-Type: application/json
 
@@ -66,7 +67,7 @@ Content-Type: application/json
    "rating": "7"
 
 }
-### 
+### Obteniendo una pelicula 
 POST http://localhost:3000/movies/movie
 Content-Type: application/json
 
@@ -75,17 +76,28 @@ Content-Type: application/json
 
 }
 
-###
+### Eliminando una pelicula 
 DELETE http://localhost:3000/movies/deletemovies
 Content-Type: application/json
 
 {
     "id": "60da162ad8160a49f0862529"
 }
-###
+
+### Buscar pelicula por el titulo
+post http://localhost:3000/movies/moviebytitle
+Content-Type: application/json
+
+{
+    "title": "la sirenita"
+}
+
+
+
+### Obteniendo todos los comentarios 
 GET http://localhost:3000/coments/allcoments
 
-###
+### Agregando todos los comentarios 
 POST http://localhost:3000/coments/addcoments
 Content-Type: application/json
 
@@ -96,7 +108,7 @@ Content-Type: application/json
 
 }
 
-### 
+### Actualizando un comentario
 PUT http://localhost:3000/coments/uptadecoments
 Content-Type: application/json
 
@@ -107,7 +119,7 @@ Content-Type: application/json
    "movie": " joker"
 }
 
-###
+### Eliminando un comentario 
 DELETE http://localhost:3000/coments/deletecoments
 Content-Type: application/json
 
