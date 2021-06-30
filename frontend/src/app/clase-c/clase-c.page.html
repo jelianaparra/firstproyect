@@ -10,242 +10,47 @@
     </ion-toolbar>
     <ion-searchbar  showCancelButton animated placeholder="Buscar"(ionchange)="buscar($event)"></ion-searchbar>
 </ion-header>
-
+ 
 <ion-content>
   <h1 >
-    PELICULAS CLASIFICACIÓN C
+    <ion-icon class="icon" color="danger" name="wine"></ion-icon>PELICULAS CLASIFICACIÓN C
   </h1>
 
   <h2 >
    +18 años de edad 
   </h2>
 
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Pelicula Clase C</ion-card-subtitle>
-      <ion-card-title>LA CASA DE LAS FLORES</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      Los hermanos de la Mora elaboran un ingenioso plan para irrumpir en su antigua casa familiar y recuperar un importante tesoro escondido.
-      DURACIÓN: 1hr 27min.
-      ELENCO: Cecilia Suarez, Aislinn Derbez, Dario Yazbek entre otros. 
-      GÉNERO: de mexico comedio de tv. 
-      PRODUCIDA POR: 
-    </ion-card-content>
-    <ion-item>
-      <ion-icon name="pin" slot="start"></ion-icon>
-      <ion-label>AÑO DE ESTRENO 2021</ion-label>
-      <ion-button  color="dark" fill="outline" slot="end">Comentar</ion-button>
-      <ion-buttons fill="outline" slot="end">
-        <ion-icon name="happy" fill="outline" slot="end"></ion-icon>
-       <ion-label>Destacar</ion-label>
-       </ion-buttons>
-    </ion-item>
-  </ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let pelicula of peliculas"  >
+        <ion-card class="cartapelicula"> 
+          <ion-card-header>
+            <ion-img class="fotopelicula" src="../assets/logo.png"></ion-img>
+            <ion-card-subtitle> {{pelicula.clase}}</ion-card-subtitle>
+            <ion-card-title>{{pelicula.titulo}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            {{pelicula.descripcion}}<br>
+               GÉNERO:{{pelicula.genero}}  <br>
+                DURACIÓN: {{pelicula.duracion}} <br>
+                ELENCO: {{pelicula.elenco}}<br>
+                PRODUCIDA POR: {{pelicula.produccion}}<br>
+          </ion-card-content>
+          <ion-item>
+            <ion-icon name="pin" slot="start"></ion-icon>
+            <ion-label>{{pelicula.year}}</ion-label>
+            <ion-button  color="dark" fill="outline" slot="end">Comentar</ion-button>
+            <ion-buttons fill="outline" slot="end">
+              <ion-icon name="happy" fill="outline" slot="end"></ion-icon>
+             </ion-buttons>
+             <ion-buttons fill="outline" slot="end">
+              <ion-icon name="heart" fill="outline" slot="end"></ion-icon>
+             </ion-buttons>
+          </ion-item>
+        </ion-card>
+      </ion-col>    
+    </ion-row>
+  </ion-grid>
 
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Pelicula Clase C</ion-card-subtitle>
-      <ion-card-title>EL EJERCITO DE LOS MUERTOS</ion-card-title>
-    </ion-card-header><ion-img name="../assets/icono1.jpg"></ion-img>
-    <ion-card-content>
-      Tras la aparición de zombis en las vegas, un grupo de mercenarios lo arriesga todo y se aventura al area de cuarentena para llevar a cabo el mayor atraco de sus vidas
-      DURACIÓN: 2HRS 28MIN.
-      GÉNERO: acción, aventura, terror, terror de zombies. 
-      ELENCO: Dave Bautista, Ella Purnell, Omari Hardwick, entre otros.
-      PRODUCIDA POR:
-    </ion-card-content>
-    <ion-item>
-      <ion-icon name="pin" slot="start"></ion-icon>
-      <ion-label>AÑO DE ESTRENO 2021</ion-label>
-      <ion-button  color="dark" fill="outline" slot="end">Comentar</ion-button>
-      <ion-buttons fill="outline" slot="end">
-        <ion-icon name="happy" fill="outline" slot="end"></ion-icon>
-       <ion-label>Destacar</ion-label>
-       </ion-buttons>
-    </ion-item>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Pelicula Clase C</ion-card-subtitle>
-      <ion-card-title>VIDAS DE PAPEL</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      En las calles de estambul, un manipulador de desechos enfermo le abre las puertas a un niño abandonado que lo hace enfrentar traumas de su propio pasado 
-      ELENCO: Cagatay Ulusoy, Emir Ali Dogrul, Ersin Arici, entre otros.
-      DURACIÓN: 1hr 37min.
-      GÉNERO: de Turquía, drama, melodrama.
-      PRODUCIDA POR: Netflix.
-    </ion-card-content>
-    <ion-item>
-      <ion-icon name="pin" slot="start"></ion-icon>
-      <ion-label>AÑO DE ESTRENO 2021</ion-label>
-      <ion-button  color="dark" fill="outline" slot="end">Comentar</ion-button>
-      <ion-buttons fill="outline" slot="end">
-        <ion-icon name="happy" fill="outline" slot="end"></ion-icon>
-       <ion-label>Destacar</ion-label>
-       </ion-buttons>
-    </ion-item>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Pelicula Clase C</ion-card-subtitle>
-      <ion-card-title>CARNAVAL</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      Tras una ruptura, una influencer invita a sus amigas a un viaje gratis al vibrante carnaval de bahia, donde aprende que la vida se trata de algo mas que solo likes
-      ELENCO: giovana cordeiro, gkay bruna inocencio, entre otros.
-      GÉNERO: de brasil, comedia, musica , musical.
-      DURACIÓN: 1hr 35min.
-      PRODUCIDA POR: Netflix.
-    </ion-card-content>
-    <ion-item>
-      <ion-icon name="pin" slot="start"></ion-icon>
-      <ion-label>AÑO DE ESTRENO 2021</ion-label>
-      <ion-button  color="dark" fill="outline" slot="end">Comentar</ion-button>
-      <ion-buttons fill="outline" slot="end">
-        <ion-icon name="happy" fill="outline" slot="end"></ion-icon>
-       <ion-label>Destacar</ion-label>
-       </ion-buttons>
-    </ion-item>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Pelicula Clase C</ion-card-subtitle>
-      <ion-card-title>SEGURIDAD</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      Luego de que una joven sufre un violento ataque en su pueblo costero, un esperto en seguridad y su familia quedan atrapados en un mar de secretos y mentiras.
-      DURACIÓN: 1hr 58min.
-      ELENCO: Marco Damore, Maya Sansa, Silvio Muccino, entre otros.
-      GÉNERO: de italia, misterios, pelicula basada en libros.
-      PRODUCIDA POR: Netflix.
-    </ion-card-content>
-    <ion-item>
-      <ion-icon name="pin" slot="start"></ion-icon>
-      <ion-label>AÑO DE ESTRENO 2021</ion-label>
-      <ion-button  color="dark" fill="outline" slot="end">Comentar</ion-button>
-      <ion-buttons fill="outline" slot="end">
-        <ion-icon name="happy" fill="outline" slot="end"></ion-icon>
-       <ion-label>Destacar</ion-label>
-       </ion-buttons>
-    </ion-item>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Pelicula Clase C</ion-card-subtitle>
-      <ion-card-title>AMOR DE CUENTO</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      Tras años de priorizar su carrera, una comediante conoce a un chico que parece perfecto: inteligente, simpatico, exitoso .... y quiza demasiado bueno para ser cierto.
-      DURACIÓN: 1hr 34min.
-      ELENCO: Iliza Shlesinger, Ryan Hansen, Margaret Cho, entre otros.
-      GÉNERO: comedia romantica, comedia, pelicula romantica.
-      PRODUCIDA POR: Netflix.
-    </ion-card-content>
-    <ion-item>
-      <ion-icon name="pin" slot="start"></ion-icon>
-      <ion-label>AÑO DE ESTRENO 2021</ion-label>
-      <ion-button  color="dark" fill="outline" slot="end">Comentar</ion-button>
-      <ion-buttons fill="outline" slot="end">
-        <ion-icon name="happy" fill="outline" slot="end"></ion-icon>
-       <ion-label>Destacar</ion-label>
-       </ion-buttons>
-    </ion-item>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Pelicula Clase C</ion-card-subtitle>
-      <ion-card-title>ZONA DE RIESGO</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      En un futuro cercano, envian a un piloto de drones a una zona de guerra y lo asignan a un comandante androide ultrasecreto con la mision de impedir un ataque nuclear.
-      DURACIÓN: 1hr 55min.
-      ELENCO: Anthony Mackie, Damson Idris, Emily Beecham, entre otros.
-      GÉNEROS: pelicula de ciencia ficción, accción y aventura.
-      PRODUCIDA POR: Netflix.
-    </ion-card-content>
-    <ion-item>
-      <ion-icon name="pin" slot="start"></ion-icon>
-      <ion-label>AÑO DE ESTRENO 2021</ion-label>
-      <ion-button  color="dark" fill="outline" slot="end">Comentar</ion-button>
-      <ion-buttons fill="outline" slot="end">
-        <ion-icon name="happy" fill="outline" slot="end"></ion-icon>
-       <ion-label>Destacar</ion-label>
-       </ion-buttons>
-    </ion-item>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Pelicula Clase C</ion-card-subtitle>
-      <ion-card-title>HASTA EL CIELO</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      Despues de enamorarse de estrella, angel, un mecanico madrileño, se adentra en el mundo de los atracos y se convierte en el objetivo de un implacable detective.
-      DURACIÓN: 2hrs 1min.
-      ELENCO:: Miguel Herran, Luis Tosar, Carolina Yuste, entre otros.
-      PRODUCIDA POR: Netflix
-    </ion-card-content>
-    <ion-item>
-      <ion-icon name="pin" slot="start"></ion-icon>
-      <ion-label>AÑO DE ESTRENO 2021</ion-label>
-      <ion-button  color="dark" fill="outline" slot="end">Comentar</ion-button>
-      <ion-buttons fill="outline" slot="end">
-        <ion-icon name="happy" fill="outline" slot="end"></ion-icon>
-       <ion-label>Destacar</ion-label>
-       </ion-buttons>
-    </ion-item>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Pelicula Clase C</ion-card-subtitle>
-      <ion-card-title>LOCO POR ELLO</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      Despues de pasar una alocada noche con Carla, Adri descubre que hay una sola manera de volver a verla: internarse en el centro psiquiatrico donde vive ella.
-      ELENCO: alvaro cervantes, susana abaitua, luis zahera, entre otros. 
-      GÉNERO: comedia romantica, de españa, comedia.
-      DURACIÓN: 1hr 42min.
-      PRODUCIDA POR: Netflix
-    </ion-card-content>
-    <ion-item>
-      <ion-icon name="pin" slot="start"></ion-icon>
-      <ion-label>AÑO DE ESTRENO 2021</ion-label>
-      <ion-button  color="dark" fill="outline" slot="end">Comentar</ion-button>
-      <ion-buttons fill="outline" slot="end">
-        <ion-icon name="happy" fill="outline" slot="end"></ion-icon>
-       <ion-label>Destacar</ion-label>
-       </ion-buttons>
-    </ion-item>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Pelicula Clase C</ion-card-subtitle>
-      <ion-card-title>LAVA PERROS</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      Cuando un narco en decadencia se niega a saldar su deuda con un advenedizo, solo una reserva oculta puede salvar a sus hombres. Justo la que acaba de hallar el jardinero.
-      DURACIÓN: 1hr 47min.
-      ELENCO: Christian Tappan, Anderson Ballesteros, John Alex Toro, entre otros. 
-      PRODUCIDA POR: Netflix.
-    </ion-card-content>
-    <ion-item>
-      <ion-icon name="pin" slot="start"></ion-icon>
-      <ion-label>AÑO DE ESTRENO 2021</ion-label>
-      <ion-button  color="dark" fill="outline" slot="end">Comentar</ion-button>
-      <ion-buttons fill="outline" slot="end">
-        <ion-icon name="happy" fill="outline" slot="end"></ion-icon>
-       <ion-label>Destacar</ion-label>
-       </ion-buttons>
-    </ion-item>
-  </ion-card>
 
 </ion-content>

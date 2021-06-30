@@ -13,245 +13,48 @@
 
 <ion-content>
   <h1 >
-    PELICULAS CLASIFICACIÓN A
+    <ion-icon class="icon" color="danger" name="happy"></ion-icon>PELICULAS CLASIFICACIÓN A
   </h1>
 
   <h2 >
     Todo Público
   </h2>
 
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Pelicula Clase A</ion-card-subtitle>
-      <ion-card-title>LINTERNA VERDE</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-        Guerreros extraterrestres eligen a un talentoso piloto de prueba para representarlos en la tierra, quien usará sus nuevos poderos como linterna verde 
-        Elenco: Ryan Reynolds, Blake Lively, Peter Sarsgaard, entre otros.
-        Genero: Peliculas de ciencia ficción, acción y aventuras 
-        DURACIÓN:: 1h 53min 
-        PRODUCIDA POR:	DC Entertainment, Warner Premiere, Warner Bros. Animation
-    </ion-card-content>
-    <ion-item>
-      <ion-icon name="pin" slot="start"></ion-icon>
-      <ion-label>AÑO DE ESTRENO 2011</ion-label>
-      <ion-button  color="dark" fill="outline" slot="end">Comentar</ion-button>
-      <ion-buttons fill="outline" slot="end">
-        <ion-icon name="happy" fill="outline" slot="end"></ion-icon>
-       <ion-label>Destacar</ion-label>
-       </ion-buttons>
-       <ion-buttons fill="outline" slot="end">
-        <ion-icon name="heart" fill="outline" slot="end"></ion-icon>
-       <ion-label>Me Gusta</ion-label>
-       </ion-buttons>
-    </ion-item>
-  </ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let pelicula of peliculas"  >
+        <ion-card class="cartapelicula"> 
+          <ion-card-header>
+            <ion-img class="fotopelicula" src="../assets/logo.png"></ion-img>
+            <ion-card-subtitle> {{pelicula.clase}}</ion-card-subtitle>
+            <ion-card-title>{{pelicula.titulo}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            {{pelicula.descripcion}}<br>
+               GÉNERO:{{pelicula.genero}}  <br>
+                DURACIÓN: {{pelicula.duracion}} <br>
+                ELENCO: {{pelicula.elenco}}<br>
+                PRODUCIDA POR: {{pelicula.produccion}}<br>
+          </ion-card-content>
+          <ion-item>
+            <ion-icon name="pin" slot="start"></ion-icon>
+            <ion-label>{{pelicula.year}}</ion-label>
+            <ion-button  color="dark" fill="outline" slot="end">Comentar</ion-button>
+            <ion-buttons fill="outline" slot="end">
+              <ion-icon name="happy" fill="outline" slot="end"></ion-icon>
+             </ion-buttons>
+             <ion-buttons fill="outline" slot="end">
+              <ion-icon name="heart" fill="outline" slot="end"></ion-icon>
+             </ion-buttons>
+          </ion-item>
+        </ion-card>
+      </ion-col>    
+    </ion-row>
+  </ion-grid>
+  
 
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Pelicula Clase A</ion-card-subtitle>
-      <ion-card-title>OHANA UN MAGNIFICO TESORO</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      Mientras veranean en oahu, dos hermanos de brooklyn se conectan con su ascendencia hawaiana y con su familia en una misión audaz para recuperar un tesoro perdido.
-      ELENCO: Kea peahu, alex aiono, lindsay watson, entre otras.
-      DURACIÓN 2hrs 3min
-      GENERO infantil, familiar y de comedia 
-      PRODUCIDA POR: Netflix
-    </ion-card-content>
-    <ion-item>
-      <ion-icon name="pin" slot="start"></ion-icon>
-      <ion-label>AÑO DE ESTRENO 2021</ion-label>
-      <ion-button  color="dark" fill="outline" slot="end">Comentar</ion-button>
-      <ion-buttons fill="outline" slot="end">
-        <ion-icon name="happy" fill="outline" slot="end"></ion-icon>
-       <ion-label>Destacar</ion-label>
-       </ion-buttons>
-    </ion-item>
-  </ion-card>
 
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Pelicula Clase A</ion-card-subtitle>
-      <ion-card-title>CHICASKATER</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      Despues de descubrir una pasión transformada por el skate, una joven de la india rural debera sortear distintos desafios para alcanzar su sueño de competir 
-      ELENCO: Rachel Saanchita Gupta, Amy Maghera, Shafin  Patel, entre otros.
-      GENERO: drama, de la india, social.
-      DURACIÓN: 1hr 49min.
-      PRODUCIDA POR: Netflix
-    </ion-card-content>
-    <ion-item>
-      <ion-icon name="pin" slot="start"></ion-icon>
-      <ion-label>AÑO DE ESTRENO 2021</ion-label>
-      <ion-button  color="dark" fill="outline" slot="end">Comentar</ion-button>
-      <ion-buttons fill="outline" slot="end">
-        <ion-icon name="happy" fill="outline" slot="end"></ion-icon>
-       <ion-label>Destacar</ion-label>
-       </ion-buttons>
-    </ion-item>
-  </ion-card>
 
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Pelicula Clase A</ion-card-subtitle>
-      <ion-card-title>BOB ESPONJA UN HEROE FUERA DEL AGUA</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      El apnico se apodera de fondo de nikini cuando un pirata roba la receta secreta de la cangreburguer, bob esponja y sus amigos emprenden una misión para recuperarla 
-      ELENCO: Tom Kenny, Antonio Banderas, Clancy Brown, entre otros.
-      GENERO: pelicula familiar, pelicula infantil y comedia.
-      DURACIÓN: 1h 35min.
-      PRODUCIDA POR: United Plankton Pictures, Disruption Entertainment
-    </ion-card-content>
-    <ion-item>
-      <ion-icon name="pin" slot="start"></ion-icon>
-      <ion-label>AÑO DE ESTRENO 2015</ion-label>
-      <ion-button  color="dark" fill="outline" slot="end">Comentar</ion-button>
-      <ion-buttons fill="outline" slot="end">
-        <ion-icon name="happy" fill="outline" slot="end"></ion-icon>
-       <ion-label>Destacar</ion-label>
-       </ion-buttons>
-    </ion-item>
-  </ion-card>
 
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Pelicula Clase A</ion-card-subtitle>
-      <ion-card-title>SÚPERHEROICOS</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      Cuando los extraterrrestres capturan a los superheroes de la tierra, sus hijos deben aprender a trabajar juntos para salvar a sus padres y al planeta tierra.
-ELENCO: yaya gosselin, pedro pascal, priyanka chopra Jonas, entre otros.
-GÉNERO: Pelicula infantil, familiar y de comedia.
-DURACIÓN: 1hr 40min
-PRODUCIDA POR: Netflix
-    </ion-card-content>
-    <ion-item>
-      <ion-icon name="pin" slot="start"></ion-icon>
-      <ion-label>AÑO DE ESTRENO 2020</ion-label>
-      <ion-button  color="dark" fill="outline" slot="end">Comentar</ion-button>
-      <ion-buttons fill="outline" slot="end">
-        <ion-icon name="happy" fill="outline" slot="end"></ion-icon>
-       <ion-label>Destacar</ion-label>
-       </ion-buttons>
-    </ion-item>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Pelicula Clase A</ion-card-subtitle>
-      <ion-card-title>TRAVIESO DE LA MANSIÓN A LA CALLE</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      La privilegiada vida del consentido travieso queda patas para arriba cuando el can se pierde y debe aprender a sobrevivir en las calles de la gran ciudad.
-      ELENCO: Big Sean, Pamela Adlon, Lucy Hale, entre otros.
-      GENEROS: pelicula familiar, infantil con musica para niños.
-      DURACIÓN: 1hr 28min
-      PRODUCIDA POR: Netflix
-    </ion-card-content>
-    <ion-item>
-      <ion-icon name="pin" slot="start"></ion-icon>
-      <ion-label>AÑO DE ESTRENO 2021</ion-label>
-      <ion-button  color="dark" fill="outline" slot="end">Comentar</ion-button>
-      <ion-buttons fill="outline" slot="end">
-        <ion-icon name="happy" fill="outline" slot="end"></ion-icon>
-       <ion-label>Destacar</ion-label>
-       </ion-buttons>
-    </ion-item>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Pelicula Clase A</ion-card-subtitle>
-      <ion-card-title>EL DRAGON DE LA TIERRA</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      El perseverante adolescente Din anhela recuperar a su mejor amiga de la infancia cuando conoce a un dragón de los deseos que le muestra la magia de lo posible.
-      ELENCO: Jimmy Wong, John Cho, Constance Wu, entre otros
-      GÉNERO: pelicula china, infantil y familiar 
-      DURACIÓN: 1rs 42 min
-      PRODUCIDA POR: Netflix
-    </ion-card-content>
-    <ion-item>
-      <ion-icon name="pin" slot="start"></ion-icon>
-      <ion-label>AÑO DE ESTRENO 2021</ion-label>
-      <ion-button  color="dark" fill="outline" slot="end">Comentar</ion-button>
-      <ion-buttons fill="outline" slot="end">
-        <ion-icon name="happy" fill="outline" slot="end"></ion-icon>
-       <ion-label>Destacar</ion-label>
-       </ion-buttons>
-    </ion-item>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Pelicula Clase A</ion-card-subtitle>
-      <ion-card-title>ANGRY BIRS LA PELICULA</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      Sentenciado a clases de control de ira, el gruñon red se convierte ne un heroe que entrena a sus compañeros para desatar su furia interna cuando los cerdos los invaden.
-      DURACIÓN 1hr 37min.
-      GENERO: Pelicula familiar, infantil y comedia.
-      ELENCO: Jason Sudeikis, Josh Gad, Danny McBride, entre otros.
-      PRODUCIDA POR: Sony Pictures Animation.
-    </ion-card-content>
-    <ion-item>
-      <ion-icon name="pin" slot="start"></ion-icon>
-      <ion-label>AÑO DE ESTRENO 2016</ion-label>
-      <ion-button  color="dark" fill="outline" slot="end">Comentar</ion-button>
-      <ion-buttons fill="outline" slot="end">
-        <ion-icon name="happy" fill="outline" slot="end"></ion-icon>
-       <ion-label>Destacar</ion-label>
-       </ion-buttons>
-    </ion-item>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Pelicula Clase A</ion-card-subtitle>
-      <ion-card-title>KARATE KID</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      Dre y su madre se mudan a pekin, donde buscara un maestro de artes marciales que le ayude a defenderse de un maton que la maltrata, nueva versión del clasico de los 80 
-      ELENCO: Jaden smith, jackie chan, taraji P. Henson, entre otras.
-      DURACIÓN 2hrs 20min.
-      GÉNERO: arte marciales, familiar, infantil y familiar.
-      PRODUCIDA POR: Overbrook Entertainment, China Film Group Corp., Jerry Weintraub Productions.
-    </ion-card-content>
-    <ion-item>
-      <ion-icon name="pin" slot="start"></ion-icon>
-      <ion-label>AÑO DE ESTRENO 2010</ion-label>
-      <ion-button  color="dark" fill="outline" slot="end">Comentar</ion-button>
-      <ion-buttons fill="outline" slot="end">
-        <ion-icon name="happy" fill="outline" slot="end"></ion-icon>
-       <ion-label>Destacar</ion-label>
-       </ion-buttons>
-    </ion-item>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Pelicula Clase A</ion-card-subtitle>
-      <ion-card-title>EMOGI LA PELICULA</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      En textopolis, donde se supone los emogis solo deben mostrar una emoción, las diversas expresiones de gene se vuelven un problema, su solución es volverse normal.
-      ELENCO: t.j. Miller, james corden , anna faris, entre otros.
-      GÉNERO: pelucula infantil y comedia.
-      DURACIÓN 1hr 27min.
-      PRODUCIDA POR: Sony Pictures Animation
-    </ion-card-content>
-    <ion-item>
-      <ion-icon name="pin" slot="start"></ion-icon>
-      <ion-label>AÑO DE ESTRENO 2017</ion-label>
-      <ion-button  color="dark" fill="outline" slot="end">Comentar</ion-button>
-      <ion-buttons fill="outline" slot="end">
-        <ion-icon name="happy" fill="outline" slot="end"></ion-icon>
-       <ion-label>Destacar</ion-label>
-       </ion-buttons>
-    </ion-item>
-  </ion-card>
 
 </ion-content>
