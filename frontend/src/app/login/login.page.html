@@ -5,15 +5,19 @@
       <ion-row>
         <ion-col>
           <ion-img name="../assets/foto33.jpg"></ion-img></ion-col>
-          <ion-col> <ion-back-button></ion-back-button></ion-col>
-        <ion-col>Regresar </ion-col>
+          <ion-col> <ion-back-button [routerLink]="['/registration']"></ion-back-button><ion-col>Regresar </ion-col></ion-col>
       </ion-row>
-    </ion-buttons>
+    </ion-buttons> 
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+ 
   <form class="loguearse" (ngSubmit)="login()"[formGroup]="credentials">
+    <ion-img class="usuariofoto" src="../assets/usuario.png"></ion-img>
+    <h1>
+Inicia Sesion
+    </h1>
     <ion-item lines="full">
       <ion-label position="floating">Correo Electronico</ion-label>
       <ion-input type="text" required formControlName="Email" ></ion-input >

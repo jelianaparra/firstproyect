@@ -3,6 +3,11 @@
     margin:auto;
     margin-top: 20px;
 }
+h1{
+    text-align: center;
+    color:dark;
+    font-family:fantasy, 'Times New Roman', Times, serif;
+}
 
 .loguearse{
     width: 350px;
@@ -11,6 +16,10 @@
     padding: 30px;
     margin: auto;
     margin-top: 50px;
+    .usuariofoto{
+        width:100px;
+        margin:auto;
+    }
 }
 
 .contrasena{

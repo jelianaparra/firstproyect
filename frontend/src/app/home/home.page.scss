@@ -4,8 +4,20 @@
   display: flex;
   ion-grid{
     margin:auto;
-    width: 200px;
+    width: 400px;
   }
+  .usuariofoto{
+    width:250px;
+    margin:auto;
+}
+}
+
+h1{
+  text-align: center;
+  color:dark;
+  font-family:fantasy, 'Times New Roman', Times, serif;
+  padding: 0 30PX 0 0 ;
+  margin:auto;
 }
 
 #container strong {

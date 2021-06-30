@@ -1,12 +1,12 @@
 <ion-header>
   <ion-toolbar color="danger">
     <ion-buttons>
+      <ion-img src="../assets/logo.png"></ion-img>
       <ion-row>
         <ion-col>
           <ion-img name="../assets/foto33.jpg"></ion-img>
         </ion-col>
-        <ion-col> <ion-back-button></ion-back-button></ion-col>
-        <ion-col>Regresar</ion-col>
+        <ion-col> <ion-back-button [routerLink]="['/home']"></ion-back-button> <ion-col>Regresar</ion-col></ion-col>
       </ion-row>
       
   
@@ -18,6 +18,10 @@
 <ion-content>
 
   <form  class="FormularioRegistro"(ngSubmit)="Register()"[formGroup]="credentials"> 
+    <ion-img class="usuariofoto" src="../assets/usuario.png"></ion-img>
+    <h1>
+Regístrate
+    </h1>
     <ion-item lines="full">
       <ion-label position="floating">Nombre</ion-label>
       <ion-input type="text" required formControlName="name"></ion-input>
