@@ -27,80 +27,34 @@
   <h1 >
     Estrenos Más Recientes
   </h1>
-  
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Pelicula Clase B</ion-card-subtitle>
-      <ion-card-title>PATERNIDAD</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      Un papa novato y viudo les hace frente a las dudas, los miedos, el dolor y los pañales sucios al criar a su hija por su cuenta, inspirada en una historia real 
-          GÉNERO: basada en la vida real, basada en libros, drama.
-          DURACIÓN: 1hr 50min
-          ELENCO: Kevin Hart, Alfre Woodard, Lil Rel Howery, entre otros
-    </ion-card-content>
-    <ion-item>
-      <ion-icon name="pin" slot="start"></ion-icon>
-      <ion-label>AÑO DE ESTRENO 2021</ion-label>
-      <ion-button color="dark" fill="outline" slot="end">Ver detalles</ion-button>
-    </ion-item>
-  </ion-card>
+  <ion-grid>
+  <ion-row>
+    <ion-col *ngFor="let pelicula of peliculas"  >
+      <ion-card class="cartapelicula"> 
+        <ion-card-header>
+          <ion-img class="fotopelicula" src="../assets/foto11.jpg"></ion-img>
+          <ion-card-subtitle> {{pelicula.clase}}</ion-card-subtitle>
+          <ion-card-title>{{pelicula.titulo}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{pelicula.descripcion}}<br>
+             GÉNERO:{{pelicula.genero}}  <br>
+              DURACIÓN: {{pelicula.duracion}} <br>
+              ELENCO: {{pelicula.elenco}}
+              PRODUCIDA POR: {{pelicula.produccion}}
+        </ion-card-content>
+        <ion-item>
+          <ion-icon name="pin" slot="start"></ion-icon>
+          <ion-label>{{pelicula.year}}</ion-label>
+          <ion-button color="dark" fill="outline" slot="end" >Ver detalles</ion-button>
+        </ion-item>
+      </ion-card>
+    
+    </ion-col>
+    
+  </ion-row>
+</ion-grid>
 
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Pelicula Clase A</ion-card-subtitle>
-      <ion-card-title>CHICASKATER</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      Despues de descubrir una pasión transformada por el skate, una joven de la india rural debera sortear distintos desafios para alcanzar su sueño de competir 
-      ELENCO: Rachel Saanchita Gupta, Amy Maghera, Shafin  Patel, entre otros
-      GENERO: drama, de la india, social
-      DURACIÓN 1hr 49min
-      PRODUCIDA POR: Netflix.
-    </ion-card-content>
-    <ion-item>
-      <ion-icon name="pin" slot="start"></ion-icon>
-      <ion-label>AÑO DE ESTRENO 2021</ion-label>
-      <ion-button fill="outline" slot="end"  color="dark">Ver detalles</ion-button>
-    </ion-item>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Pelicula Clase C</ion-card-subtitle>
-      <ion-card-title>VIDAS DE PAPEL</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      En las calles de estambul, un manipulador de desechos enfermo le abre las puertas a un niño abandonado que lo hace enfrentar traumas de su propio pasado 
-      ELENCO: cagatay ulusoy, emir ali dogrul, ersin arici, entre otros 
-      DURACIÓN; 1hr 37min
-      GÉNERO: de turquía, drama, melodrama 
-    </ion-card-content>
-    <ion-item>
-      <ion-icon name="pin" slot="start"></ion-icon>
-      <ion-label>AÑO DE ESTRENO 2021</ion-label>
-      <ion-button fill="outline" slot="end"  color="dark">Ver detalles</ion-button>
-    </ion-item>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>Pelicula Clase A</ion-card-subtitle>
-      <ion-card-title>OHANA UN MAGNIFICO TESORO</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      Mientras veranean en oahu, dos hermanos de brooklyn se conectan con su ascendencia hawaiana y con su familia en una misión audaz para recuperar un tesoro perdido.
-      ELENCO: Kea peahu, alex aiono, lindsay watson, entre otras.
-      DURACIÓN: 2hrs 3min
-      GÉNERO: infantil, familiar y de comedia 
-      PRODUCIDA POR: Netflix 
-    </ion-card-content>
-    <ion-item>
-      <ion-icon name="pin" slot="start"></ion-icon>
-      <ion-label>AÑO DE ESTRENO 2021</ion-label>
-      <ion-button fill="outline" slot="end"  color="dark">Ver detalles</ion-button>
-    </ion-item>
-  </ion-card>
 
 </ion-content>
 
