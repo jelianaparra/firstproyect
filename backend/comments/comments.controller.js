@@ -1,11 +1,11 @@
-const comentsSchema = require("../coments/coments.model");
+const commentsSchema = require("../comments/comments.model");
 
-exports.getComents = async (req, res) => {
+exports.getComments = async (req, res) => {
   try {
-    let coments = await comentsSchema.find();
+    let comments = await commentsSchema.find();
     res.json({
       done: true,
-      coments,
+      comments,
     });
   } catch (err) {
     return res.status(400).json({
@@ -15,12 +15,12 @@ exports.getComents = async (req, res) => {
   }
 };
 
-exports.addComents = async (req, res) => {
+exports.addComments = async (req, res) => {
   const body = req.body;
   const id = req.id;
   try {
-    const coments = new comentsSchema(req.body);
-    await coments.save();
+    const comments = new commentsSchema(req.body);
+    await comments.save();
     res.json({
       done: true,
       msg: "Comment updated successfully!",
@@ -33,12 +33,12 @@ exports.addComents = async (req, res) => {
   }
 };
 
-exports.uptadeComents = async (req, res) => {
+exports.uptadeComments = async (req, res) => {
   const { body } = req;
   const { id } = body;
-  console.log(id, body);
+  //console.log(id, body);
   try {
-    await comentsSchema.findByIdAndUpdate(id, body);
+    await commentsSchema.findByIdAndUpdate(id, body);
     res.json({
       done: true,
       msg: "Comment updated successfully!",
@@ -51,10 +51,10 @@ exports.uptadeComents = async (req, res) => {
   }
 };
 
-exports.deleteComents = async (req, res) => {
+exports.deleteComments = async (req, res) => {
   const id = req.body.id;
   try {
-    await comentsSchema.findByIdAndDelete(id);
+    await commentsSchema.findByIdAndDelete(id);
     res.json({
       done: true,
       msg: "Comment delete successfully!",

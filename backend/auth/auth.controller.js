@@ -14,6 +14,7 @@ exports.createUser = (req, res, next) => {
     if (err && err.code === 11000)
       return res.status(409).send("Email already exists");
     if (err) {
+      //console.log("hhhhh", err);
       return res.status(500).send("Server error");
     }
     const expiresIn = 24 * 60 * 60;

@@ -1,6 +1,6 @@
 const { Schema, model } = require("mongoose");
 
-const comentsSchema = new Schema(
+const commentsSchema = new Schema(
   {
     identity: {
       type: Object,
@@ -38,4 +38,4 @@ const comentsSchema = new Schema(
   }
 );
 
-module.exports = model("coments", comentsSchema);
+module.exports = model("comments", commentsSchema);

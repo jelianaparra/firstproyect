@@ -29,7 +29,7 @@ router.get("/", (req, res) => {
 
 app.use("/profile", require("./profile/routes.profile"));
 app.use("/movies", require("./movies/movies.routes"));
-app.use("/coments", require("./coments/coments.routes"));
+app.use("/comments", require("./comments/comments.routes"));
 
 app.listen(propierties.PORT, () =>
   console.log(`Server runing on port ${propierties.PORT}`)
